@@ -6,6 +6,7 @@ Spring Cloud practice .
 
 - Install Java Jdk version 11 .
 - Install Docker .
+- Setup the database for the currency service.
 
 ### Config server
 
@@ -26,5 +27,9 @@ Spring Cloud practice .
 
 ### Currency Service
 
-- Use the command : curl `localhost:8000/currency-exchange/from/USD/to/USD`
+- Uses a H2 sql in memory database
+
+- Inside the folder currency-service run the command : `mvn clean spring-boot:run`
+- Use the command : curl `http://localhost:8000/currency-exchange/from/USD/to/INR`
 - To run the instance on a different server run the command with : `-Dserver.port=8001`
+- Access the h2 database manager in the url `http://localhost:8000/h2-console/`
