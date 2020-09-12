@@ -33,3 +33,8 @@ Spring Cloud practice .
 - Use the command : curl `http://localhost:8000/currency-exchange/from/USD/to/INR`
 - To run the instance on a different server run the command with : `-Dserver.port=8001`
 - Access the h2 database manager in the url `http://localhost:8000/h2-console/`
+
+### Currency Exchange Service :
+
+- Calls the currency service to get the results .
+- Use the command : curl `http://localhost:8100/currency-converter/from/USD/to/INR/quantity/1000`
