@@ -7,6 +7,10 @@ Spring Cloud practice .
 - Install Java Jdk version 11 .
 - Install Docker .
 - Setup the database for the currency service.
+- Start the Configuration server.
+- Start the Eureka server.
+- Start the Exchange service .
+- Start the Conversion service .
 
 ### Config server
 
@@ -44,3 +48,13 @@ Spring Cloud practice .
 - Eureka Naming Server that runs .
 - Run the command : `cd netflix-eureka-naming-server && mvn clean spring-boot:run`
 - Access the url : `http://localhost:8761/`
+
+## Netflix Zuul Server
+
+Netflix Zuul Api Gateway
+
+- Run the command : `cd netflix-zuul-api-gateway-server && mvn clean spring-boot:run`
+- Access the url `http://localhost:8000/currency-exchange/from/EUR/to/INR` to query the exchange service .
+- Access the url `http://localhost:8765/currency-exchange-service/currency-exchange/from/EUR/to/INR` to query the service using the Api Gateway.
+- Access the url `http://localhost:8100/currency-converter-feign/from/USD/to/INR/quantity/1000`
+- Access to the currency conversion service using Zuul `http://localhost:8765/currency-conversion-service/currency-converter-feign/from/USD/to/INR/quantity/100`
