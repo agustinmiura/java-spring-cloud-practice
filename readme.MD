@@ -38,3 +38,9 @@ Spring Cloud practice .
 
 - Calls the currency service to get the results .
 - Use the command : curl `http://localhost:8100/currency-converter/from/USD/to/INR/quantity/1000`
+
+## Eureka Naming Server
+
+- Eureka Naming Server that runs .
+- Run the command : `cd netflix-eureka-naming-server && mvn clean spring-boot:run`
+- Access the url : `http://localhost:8761/`
