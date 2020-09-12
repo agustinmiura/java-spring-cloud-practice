@@ -58,3 +58,5 @@ Netflix Zuul Api Gateway
 - Access the url `http://localhost:8765/currency-exchange-service/currency-exchange/from/EUR/to/INR` to query the service using the Api Gateway.
 - Access the url `http://localhost:8100/currency-converter-feign/from/USD/to/INR/quantity/1000`
 - Access to the currency conversion service using Zuul `http://localhost:8765/currency-conversion-service/currency-converter-feign/from/USD/to/INR/quantity/100`
+
+
