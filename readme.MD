@@ -23,3 +23,8 @@ Spring Cloud practice .
 - Run the command : `mvn clean spring-boot:run`
 - Go to the url : `localhost:8080/limits`
 - You will see the config from the Git repository
+
+### Currency Service
+
+- Use the command : curl `localhost:8000/currency-exchange/from/USD/to/USD`
+- To run the instance on a different server run the command with : `-Dserver.port=8001`
