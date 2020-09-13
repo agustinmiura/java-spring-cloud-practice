@@ -64,3 +64,5 @@ Netflix Zuul Api Gateway
 - Inside the docker folder execute the command : `docker-compose up`
 - To shudown execute : `docker-compose down`
 - Check the url : `http://localhost:15672/#/` with credentials `guest:guest`
+
+
