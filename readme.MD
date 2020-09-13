@@ -75,3 +75,5 @@ Netflix Zuul Api Gateway
   - Currency exchange.
   - Currency conversion.
   - Netflix Zulu Gateway.
+- Query the microservice `http://localhost:8100/currency-converter-feign/from/EUR/to/INR/quantity/100`
+- Check the logs on Zipkin
