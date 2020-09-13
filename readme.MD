@@ -59,8 +59,21 @@ Netflix Zuul Api Gateway
 - Access the url `http://localhost:8100/currency-converter-feign/from/USD/to/INR/quantity/1000`
 - Access to the currency conversion service using Zuul `http://localhost:8765/currency-conversion-service/currency-converter-feign/from/USD/to/INR/quantity/100`
 
-## Rabbit MQ
+## Rabbit MQ and Zipkin
 
 - Inside the docker folder execute the command : `docker-compose up`
 - To shudown execute : `docker-compose down`
 - Check the url : `http://localhost:15672/#/` with credentials `guest:guest`
+- Check the url : `http://localhost:9411/zipkin/`
+
+## Order to run everything with Zipkin
+
+- Run `cd docker/service && docker-compose up` to start the Rabbit MQ server.
+- Run `cd docker/zipkin && docker-compose up` to start the Zipkin Server .
+- Run the following microservices in order :
+  - NetflixEurekaNamingServerApplication
+  - Currency exchange.
+  - Currency conversion.
+  - Netflix Zulu Gateway.
+- Query the microservice `http://localhost:8100/currency-converter-feign/from/EUR/to/INR/quantity/100`
+- Check the logs on Zipkin

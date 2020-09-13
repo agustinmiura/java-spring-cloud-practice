@@ -42,6 +42,13 @@
         <appender-ref ref="RollingFile"/>
         <appender-ref ref="Console"/>
     </logger>
+
+    <!-- Enable logging to see the span id and trace id -->
+    <logger name="org.springframework.cloud.sleuth" level="INFO" additivity="false">
+        <appender-ref ref="RollingFile"/>
+        <appender-ref ref="Console"/>
+    </logger>
+
     <logger name="com" level="INFO" additivity="false">
         <appender-ref ref="RollingFile"/>
         <appender-ref ref="Console"/>
