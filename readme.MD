@@ -65,3 +65,13 @@ Netflix Zuul Api Gateway
 - To shudown execute : `docker-compose down`
 - Check the url : `http://localhost:15672/#/` with credentials `guest:guest`
 - Check the url : `http://localhost:9411/zipkin/`
+
+## Order to run everything with Zipkin
+
+- Run `cd docker/service && docker-compose up` to start the Rabbit MQ server.
+- Run `cd docker/zipkin && docker-compose up` to start the Zipkin Server .
+- Run the following microservices in order :
+  - NetflixEurekaNamingServerApplication
+  - Currency exchange.
+  - Currency conversion.
+  - Netflix Zulu Gateway.
