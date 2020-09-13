@@ -87,3 +87,6 @@ Netflix Zuul Api Gateway
   - Configuration server .
   - Limits service .
 - Endpoint to refresh all the configurations : `curl -X POST http://localhost:8080/actuator/bus-refresh`
+
+
+
