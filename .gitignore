@@ -85,3 +85,6 @@ nb-configuration.xml
 
 logs
 logs/
+
+*.log
+

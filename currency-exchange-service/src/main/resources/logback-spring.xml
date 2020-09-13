@@ -33,20 +33,27 @@
     </appender>
 
     <!-- LOG everything at INFO level -->
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="RollingFile"/>
         <appender-ref ref="Console"/>
     </root>
 
-    <logger name="org" level="INFO" additivity="false">
+    <logger name="org" level="ERROR" additivity="false">
         <appender-ref ref="RollingFile"/>
         <appender-ref ref="Console"/>
     </logger>
-    <logger name="com" level="INFO" additivity="false">
+
+    <!-- Enable logging to see the span id and trace id -->
+    <logger name="org.springframework.cloud.sleuth" level="DEBUG" additivity="false">
         <appender-ref ref="RollingFile"/>
         <appender-ref ref="Console"/>
     </logger>
-    <logger name="ar.com.miura" level="INFO" additivity="false">
+
+    <logger name="com" level="ERROR" additivity="false">
+        <appender-ref ref="RollingFile"/>
+        <appender-ref ref="Console"/>
+    </logger>
+    <logger name="ar.com.miura" level="ERROR" additivity="false">
         <appender-ref ref="RollingFile"/>
         <appender-ref ref="Console"/>
     </logger>
