@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  zipkin:
+    image: openzipkin/zipkin
+    #environment:
+    #  - RABBIT_URI=amqp://localhost
+    #  - RABBIT_ADDRESSES=localhost:5672
+    ports:
+      - 9411:9411
