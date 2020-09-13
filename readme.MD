@@ -6,6 +6,7 @@ Spring Cloud practice .
 
 - Install Java Jdk version 11 .
 - Install Docker .
+- Install Docker Compose .
 - Setup the database for the currency service.
 - Start the Configuration server.
 - Start the Eureka server.
@@ -77,3 +78,12 @@ Netflix Zuul Api Gateway
   - Netflix Zulu Gateway.
 - Query the microservice `http://localhost:8100/currency-converter-feign/from/EUR/to/INR/quantity/100`
 - Check the logs on Zipkin
+
+## Spring Cloud Bus
+
+- Start the RabbitMq Docker .- Run `cd docker/service && docker-compose up` to start the Rabbit MQ server.
+- Run `cd docker/service && docker-compose up` to start the Rabbit MQ server.
+- Update the `application.properties` in :
+  - Configuration server .
+  - Limits service .
+- Endpoint to refresh all the configurations : `curl -X POST http://localhost:8080/actuator/bus-refresh`
