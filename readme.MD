@@ -6,6 +6,7 @@ Spring Cloud practice .
 
 - Install Java Jdk version 11 .
 - Install Docker .
+- Install Docker Compose .
 - Setup the database for the currency service.
 - Start the Configuration server.
 - Start the Eureka server.
